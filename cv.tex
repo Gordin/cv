@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+% \addbibresources{bib.bib}
+% \bibliographystyle{plain}
+% \bibliography{bib}
+
+\usepackage{multibib}
+\newcites{conf}{{Konferenzbeiträge}}
+\newcites{bachelor}{{Bachelorarbeit}}
+
+% \usepackage[bibstyle=ieee,
+%             maxnames=99,
+%             sorting=nty,
+%             language=auto,
+%             natbib=true,
+%             backend=biber
+%            ]{biblatex}
+%            \bibliography{bib.bib}
+% \addbibresource{bib.bib}
+
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\usepackage{fontspec}
+% \usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+\setmainfont{TeX Gyre Pagella} %palatino clone
+\setmainfont{TeX Gyre Termes} %palatino clone
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[ngerman]{babel}
+\usepackage[autostyle]{csquotes}
+% \usepackage{luaotfload}
+% \usepackage[EU2]{fontenc}
+
+\usepackage[scale=0.76]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2.7cm} % Uncomment to change the width of the dates column
+\setlength{\makecvtitlenamewidth}{6.5cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Andreas} % Your first name
+\familyname{Guth} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Lebenslauf}
+\address{Gierather Str. 125}{51069 Köln}
+\mobile{(0160) 80 50 760}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\email{andreas.guth@rwth-aachen.de}
+\homepage{me.gord.in}{me.gord.in} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{zusätzliche Informationen}
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\makecvtitle% Print the CV title
+\section{Persönliche Daten}
+\cvitem{Geburtsdatum}{06.10.1988}
+\cvitem{Nationalität}{Deutsch}
+\cvitem{Familienstand}{Ledig}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Schule \--- Studium}
+
+\cventry{1999\---2008}{Abitur}{Hölderlin Gymnasium}{Köln Mühlheim}{}{Leistungskurse Mathematik und Physik}  % Arguments not required can be left empty
+\cventry{2008\---2009}{Zivildienst}{Eduardus Krankenhaus}{Köln}{}{Abteilung Technik}
+\cventry{2009\---2014}{Informatik B.Sc.}{RWTH Aachen}{Aachen}{Note 2.3}{Anwendungsfach Philosophie}  % Arguments not required can be left empty
+\cventry{seit 2015}{Informatik M.Sc.}{RWTH Aachen}{Aachen}{}{Anwendungsfach Philosophie}  % Arguments not required can be left empty
+% \section{Bachelorarbeit}
+% \cventry{Titel}{Near Real-time Visual Community
+%     Analytics for XMPP-based Networks}{}{}{}{}  % Arguments not required can be left empty
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Erfahrung}
+\subsection{Beruflich}
+\cventry{2010}{Tutor für Programmierung}{RWTH}{Aachen}{}{Aufgaben:
+\begin{itemize}
+    \item Kontrollieren von Programmieraufgaben für die Vorlesung \enquote{Programmierung}\\(Java, Haskell und Prolog)
+    \item Wöchentliches Tutorium (Aufgabenbesprechung) für Studenten dieser Vorlesung
+\end{itemize}}
+%------------------------------------------------
+\cventry{seit 2011}{Studentische Hilfskraft}{RWTH}{Aachen}{}{Programmierarbeit als HiWi am Lehrstuhl i5 \-- Information Systems \& Databases der RWTH Aachen.
+% \newline{}\newline{}
+Aufgaben u.A.:
+\begin{itemize}
+\item Erweiterung der XMPP Library \href{http://strophe.im/strophejs/}{StropheJS} (JavaScript)
+  \begin{itemize}
+    \item Unterstützung für WebSockets
+    \item Erstellung und Rewrites diverser Plugins
+  \end{itemize}
+\item Arbeit für das \href{http://www.role-project.eu/}{ROLE Project} (JavaScript, Java)
+  \begin{itemize}
+    \item Entwicklung eines XMPP Chat Clients für das ROLE-SDK
+    \item Implementierung von Inter-Widget Kommunikation via XMPP im ROLE-SDK
+    \item Portierung der Inter-Widget Kommunikation in \href{http://rave.apache.org/}{Apache Rave}
+  \end{itemize}
+\item Erstellung eines REST Service zur Verwaltung und Annotierung von Videos als Musterlösung für das Praktikum \enquote{Unternehmensgründung und neue Medien} (JavaScript, Java)
+\end{itemize}}
+\cventry{2013-2014}{Mentor für Erstsemester}{RWTH}{Aachen}{}{Mentor für Informatik Erstsemester an der RWTH Aachen
+\begin{itemize}
+    \item Wöchentliche Treffen mit Studenten zur Besprechung des Studienverlaufs
+    \item Individuelle Beratung bei Problemen
+    \item Vermittlung zwischen Studenten und Universitätseinrichtungen
+\end{itemize}}
+%------------------------------------------------
+
+\subsection{Privat}
+
+\cventry{seit 2010}{Organisation/Betreuer}{Chaos Computer Club Cologne e.V.}{Köln}{}{Durchführung des \href{http://koeln.ccc.de/u23/}{u23} Projekts des CCCC e.V.
+\begin{itemize}
+    \item Vorbereitung von Vorträgen zu relevanten Themen \---\\Hauptsächlich C Programmierung auf Mikrocontrollern
+    \item Entwicklung von Codegerüsten für Teilnehmer
+    \item Betreuung der Teilnehmer vor Ort
+\end{itemize}}
+\cventry{seit 2012}{Maintainer}{Strophe.js}{(XMPP Library für JavaScript)}{}{\url{https://github.com/strophe/strophejs}}
+\cventry{2014}{Autor}{Near Real-time Visual Community Analytics for XMPP-based
+    Networks}{Aachen}{Bachelorarbeit}{Entwicklung und Visualisierung von Monitoring Infrastruktur für XMPP Netzwerke:
+    \begin{itemize}
+        \item Plugins für den XMPP Server Prosody (Lua)
+        \item Visualisierung von Netzwerkdaten (JavaScript, D3.js)
+    \end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Awards}
+%
+% \cvitem{2011}{School of Business Postgraduate Scholarship}
+% \cvitem{2010}{Top Achiever Award \--- Commerce}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Sonstige Qualifikationen}
+
+\cvitem{Entwicklung}{Programmiersprachen \& Frameworks:}
+\cvlistdoubleitem{Python: Django, Cython}{JavaScript/CoffeeScript: jQuery, D3.js}
+\cvlistdoubleitem{Java: Spring, Jersey, Android-SDK}{HTML5 \& CSS3}
+\cvlistdoubleitem{C}{Bash}
+\cvlistdoubleitem{Lua}{}
+\cvitem{}{IDEs:}
+\cvlistdoubleitem{Eclipse}{Vim}
+\cvitem{}{Versionskontrolle:}
+\cvlistdoubleitem{git}{SVN}
+\cvitem{Administration}{Betriebssysteme:}
+\cvlistdoubleitem{Debian/Ubuntu}{Archlinux}
+\cvitem{}{Dienste:}
+\cvlistdoubleitem{XMPP/Jabber (Prosody, ejabberd)}{Webserver (nginx)}
+\cvitem{Textverarbeitung}{\LaTeX}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Communication Skills}
+%
+% \cvitem{2010}{Oral Presentation at the California Business Conference}
+% \cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Sprachen}
+
+\cvitemwithcomment{Deutsch}{Muttersprache}{}
+\cvitemwithcomment{Englisch}{Fließend}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interessen/Hobbies}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvitem{seit 1998}{Mitgliedschaft in der EWTO \-- European WingTsun Organisation}
+% \cvitem{seit 2005}{Bestandene Prüfung - Examination for Assistant Instructor - EWTO}
+\cvitem{seit 2005}{Assistant Instructor in der EWTO}
+\cvitem{seit 2009}{Mitglied im \href{http://koeln.ccc.de/}{CCCC \-- Chaos Computer Club Cologne e.V.}}
+\cvitem{}{Mitglied im \href{http://ccc.de/}{CCC \-- Chaos Computer Club e.V.}}
+\cvitem{seit 2010}{Betreuer beim Jugendprojekt \href{http://koeln.ccc.de/u23/}{u23} des CCCC}
+\cvitem{2011\--2013}{Video/Orga-Team auf der \href{http://sigint.ccc.de/}{SIGINT}}
+
+\section{Publikationen}
+
+\nociteconf{*}
+\bibliographystyleconf{plainyr_gh}
+\bibliographyconf{bib.bib}              % 'publications' is the name of a BibTeX file
+%
+\nocitebachelor{*}
+\bibliographystylebachelor{plainyr_gh}
+\bibliographybachelor{bachelor.bib}              % 'publications' is the name of a BibTeX file
+
+% \nocite{*}
+% \printbibliography
+
+
+% \cvitem
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+% \clearpage
+
+%\recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Viele Grüße,} % Closing phrase
+% \enclosure[Anhängend]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle% Print letter title
+
+
+
+% \lipsum[1-3] % Dummy text
+
+% \makeletterclosing% Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
